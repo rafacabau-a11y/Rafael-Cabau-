@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Cabau | Gerontólogo em Araraquara</title>
+    <!-- Tailwind CSS (Estilos) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
+        .hero-gradient { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="text-slate-700 bg-white">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-slate-800 tracking-tight">
+                        Rafael <span class="text-teal-600">Cabau</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="text-slate-600 hover:text-teal-600 font-medium transition">Sobre Mim</a>
+                    <a href="#servicos" class="text-slate-600 hover:text-teal-600 font-medium transition">O que faço</a>
+                    <a href="#metodologia" class="text-slate-600 hover:text-teal-600 font-medium transition">Como trabalho</a>
+                    <a href="#contato" class="px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition shadow-md">Fale Comigo</a>
+                </div>
+                <!-- Botão Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-teal-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile (Escondido) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-4 pt-2 pb-4 space-y-1 shadow-lg">
+                <a href="#sobre" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-md">Sobre Mim</a>
+                <a href="#servicos" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-md">O que faço</a>
+                <a href="#metodologia" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-md">Como trabalho</a>
+                <a href="#contato" class="block px-3 py-2 text-teal-600 font-bold hover:bg-slate-50 rounded-md">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero (Topo) -->
+    <section class="pt-32 pb-20 hero-gradient">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <span class="inline-block px-3 py-1 mb-4 text-sm font-semibold tracking-wider text-teal-700 uppercase bg-teal-100 rounded-full">
+                    Gerontologia Especializada
+                </span>
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                    Um gerontólogo ao seu lado, do diagnóstico à prática diária.
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    Ajudando pessoas idosas a manterem autonomia, bem-estar e propósito, com foco em estimulação cognitiva e apoio à família.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contato" class="px-8 py-4 bg-teal-600 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-700 hover:-translate-y-1 transition duration-300 text-center">
+                        Agendar Avaliação
+                    </a>
+                    <a href="#sobre" class="px-8 py-4 bg-white text-teal-700 border border-teal-200 font-semibold rounded-lg hover:bg-teal-50 transition duration-300 text-center">
+                        Conheça meu trabalho
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <!-- Foto Principal -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] bg-slate-200 group">
+                    <!-- 
+                        FOTO: O código abaixo busca o arquivo '1000171404.jpg' na mesma pasta.
+                        Se não encontrar, usa uma imagem genérica de internet.
+                    -->
+                    <img src="1000171404.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1581579186913-45ac3e6e3dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" 
+                         alt="Rafael Cabau - Gerontólogo" 
+                         class="object-cover w-full h-full transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Quem Sou</h2>
+                <div class="w-16 h-1 bg-teal-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="prose prose-lg mx-auto text-slate-600 leading-relaxed">
+                <p class="mb-6 text-xl font-medium text-slate-800">
+                    Sou Rafael Cabau, gerontólogo formado pela USP em São Paulo, com mais de 10 anos de experiência.
+                </p>
+                <p class="mb-6">
+                    Dedico minha carreira a ajudar pessoas idosas a manterem sua autonomia e propósito de vida. Atuo com uma abordagem humana, baseada em evidências e orientada a resultados: avalio, planejo e acompanho intervenções que fazem diferença no cotidiano da pessoa idosa e no equilíbrio da família cuidadora.
+                </p>
+                
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-teal-500 my-8 shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Minha Formação</h3>
+                    <p>Graduado em Gerontologia pela USP, consolidei minha prática em serviços e projetos que integram avaliação cognitiva, rotina de estimulação e organização do cuidado, sempre respeitando a história, o ritmo e os objetivos de cada pessoa idosa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Como Posso Ajudar</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Soluções integradas para o idoso e sua rede de apoio.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition duration-300">
+                        <i data-lucide="brain" class="text-teal-600 w-6 h-6 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Estimulação Cognitiva</h3>
+                    <p class="text-slate-600">
+                        Atividades personalizadas (individuais ou em grupo) para memória, atenção, linguagem e funções executivas. Foco em manter a mente ativa e funcional.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition duration-300">
+                        <i data-lucide="clipboard-list" class="text-blue-600 w-6 h-6 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Gestão do Cuidado</h3>
+                    <p class="text-slate-600">
+                        Elaboração de plano de cuidados, acompanhamento da rotina e articulação com outros profissionais de saúde e serviços necessários.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-600 transition duration-300">
+                        <i data-lucide="users" class="text-orange-600 w-6 h-6 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Orientação para Familiares</h3>
+                    <p class="text-slate-600">
+                        Suporte prático para cuidadores: comunicação, manejo de comportamentos, criação de rotinas e adaptação do ambiente doméstico.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-600 transition duration-300">
+                        <i data-lucide="home" class="text-green-600 w-6 h-6 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Atendimento Domiciliar</h3>
+                    <p class="text-slate-600">
+                        Atendimento no conforto do lar para maior segurança e aderência às intervenções, em Araraquara e região.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologia -->
+    <section id="metodologia" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8">Como Trabalho</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">Avaliação Breve e Objetiva</h4>
+                                <p class="text-slate-600">Uso de instrumentos validados (MoCA, fluência verbal, rastreio de humor) para identificar necessidades e potencialidades.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">2</div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">Plano Claro</h4>
+                                <p class="text-slate-600">Definição de frequência, metas mensuráveis e atividades que cabem na vida real.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">3</div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900">Acompanhamento Contínuo</h4>
+                                <p class="text-slate-600">Revisões periódicas para ajustar o caminho e garantir resultados sustentáveis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diferenciais -->
+                <div class="bg-teal-900 text-white p-10 rounded-2xl shadow-2xl relative overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-teal-800 rounded-full opacity-50 blur-2xl"></div>
+                    <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-teal-500 rounded-full opacity-20 blur-2xl"></div>
+                    
+                    <h3 class="text-2xl font-bold mb-6 relative z-10">Meus Diferenciais</h3>
+                    <ul class="space-y-4 relative z-10">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Integração mente–rotina:</strong> Atividades conectadas ao dia a dia para gerar resultados reais.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Cuidado centrado na família:</strong> Orientação contínua para reduzir a sobrecarga de quem cuida.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 mt-1 flex-shrink-0"></i>
+                            <span><strong>Flexibilidade:</strong> Atendimento domiciliar e parcerias locais com planos acessíveis.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcerias -->
+    <section class="py-16 bg-teal-50 border-y border-teal-100">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Projetos e Parcerias</h2>
+            <p class="text-slate-700 mb-6 max-w-3xl mx-auto">
+                Desenvolvo programas que combinam estimulação cognitiva e rotinas de exercícios em <strong>academias e centros de convivência</strong>. 
+                Nas turmas, as tarefas cognitivas são organizadas para acontecerem integradas ao circuito físico, garantindo foco e segurança.
+            </p>
+            <div class="inline-flex gap-2 text-teal-700 font-semibold items-center bg-white px-4 py-2 rounded-full shadow-sm">
+                <i data-lucide="building-2" class="w-5 h-5"></i>
+                <span>Disponível para Academias, Studios e Instituições</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contato -->
+    <footer id="contato" class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold font-serif mb-6">Vamos conversar?</h2>
+                    <p class="text-slate-300 mb-8 text-lg">
+                        Agende uma avaliação inicial ou tire suas dúvidas sobre como a gerontologia pode ajudar sua família.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <!-- Local -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="text-teal-400 w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">Atendimento Presencial</p>
+                                <p class="text-slate-400">Araraquara e região (Domiciliar e Parcerias)</p>
+                            </div>
+                        </div>
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/5516994601328" target="_blank" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-green-900/50 rounded-full flex items-center justify-center flex-shrink-0 border border-green-800 group-hover:bg-green-600 transition">
+                                <i data-lucide="phone" class="text-green-400 w-6 h-6 group-hover:text-white transition"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg text-green-400 group-hover:text-green-300 transition">WhatsApp</p>
+                                <p class="text-slate-400 group-hover:text-white transition">(16) 99460-1328</p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="text-teal-400 w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">Email</p>
+                                <a href="mailto:contato@rafaelcabau.com.br" class="text-slate-400 hover:text-teal-400 transition">contato@rafaelcabau.com.br</a>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/rafaelcabau_gerontologo" target="_blank" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-pink-600 transition">
+                                <i data-lucide="instagram" class="text-teal-400 w-6 h-6 group-hover:text-white transition"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">Instagram</p>
+                                <p class="text-slate-400 group-hover:text-white transition">@rafaelcabau_gerontologo</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-xl">
+                    <form onsubmit="event.preventDefault(); window.open('https://wa.me/5516994601328?text=Olá, vim pelo site e gostaria de mais informações.', '_blank');">
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2">Nome</label>
+                            <input type="text" class="w-full px-4 py-3 bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold mb-2">Assunto</label>
+                            <select class="w-full px-4 py-3 bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                <option>Avaliação Cognitiva</option>
+                                <option>Gestão do Cuidado</option>
+                                <option>Parceria (Academia/Instituição)</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                        <button class="w-full bg-teal-600 text-white font-bold py-4 rounded-lg hover:bg-teal-700 transition shadow-lg flex items-center justify-center gap-2">
+                            <span>Enviar Mensagem</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                        <p class="text-xs text-center text-slate-400 mt-4">Ao enviar, você será redirecionado para o WhatsApp.</p>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
+                <p>&copy; 2025 Rafael Cabau Gerontologia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+
+        // Lógica Menu Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu ao clicar em link
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden');
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
